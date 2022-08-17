@@ -16,6 +16,5 @@ spec:
       containers:
         - name: vote
           image: 000h/vote
-  selector:
-    matchLabels:
-      type: frontend
+          ports:
+          - containerPort: 80
