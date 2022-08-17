@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: result
-          image: 000h/result
+          image: 7111418/result-app
   selector:
     matchLabels:
       type: frontend
