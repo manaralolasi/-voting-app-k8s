@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+  labels:
+    app: Worker-App
+    type: backend
+spec:
+  template:
+    metadata:
+      name: Worker-Pod
+      labels:
+        app: Worker-App
+        type: backend
+    spec:
+      containers:
+        - name: worker
+          image: 000h/worker
+  selector:
+    matchLabels:
+      type: backend

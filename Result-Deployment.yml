@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result-deployment
+  labels:
+    app: Result-App
+    type: frontend
+spec:
+  template:
+    metadata:
+      name: Result-Pod
+      labels:
+        app: Result-App
+        type: frontend
+    spec:
+      containers:
+        - name: result
+          image: 000h/result
+  selector:
+    matchLabels:
+      type: frontend
