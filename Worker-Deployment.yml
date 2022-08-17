@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: 000h/worker
+          image: 7111418/worker-app
   selector:
     matchLabels:
       type: backend
